@@ -1,0 +1,253 @@
+/* ---------------------------------- */
+/* ESTILOS GLOBALES Y DE FONDO */
+/* ---------------------------------- */
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('fondo.jpg');
+    background-size: cover;
+    background-position: center bottom;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.barra-superior {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgb(165, 0, 0);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* ---------------------------------- */
+/* CONTENEDOR PRINCIPAL - ACTIVANDO FLEXBOX EN FILA */
+/* ---------------------------------- */
+.contenedor-pantalla {
+    display: flex;
+    width: 100%; /* Ahora en móvil */
+    max-width: 2000px; /* Se mantiene para escritorio */
+    height: 100vh; /* Ahora en móvil */
+    align-items: center; /* Centrar en móvil */
+    justify-content: center;
+    /* CLAVE para móvil: apilar elementos */
+    flex-direction: column-reverse; 
+    padding: 10px;
+    box-sizing: border-box; 
+}
+
+/* ---------------------------------- */
+/* COLUMNA IZQUIERDA (PERSONAJE) */
+/* ---------------------------------- */
+.columna-izquierda {
+    width: 100%; /* Ahora 100% en móvil */
+    height: 30%; /* Reducir en móvil */
+    display: flex;
+    align-items: flex-end;
+    justify-content: center; /* Centrar el personaje */
+}
+
+/* ---------------------------------- */
+/* ESTILO DEL PERSONAJE */
+/* ---------------------------------- */
+.personaje {
+    height: 100%;
+    background-image: url('samantha.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    max-width: 150px; /* Tamaño más pequeño en móvil */
+    max-height: 90vh;
+}
+
+/* ---------------------------------- */
+/* COLUMNA DERECHA (CHAT) */
+/* ---------------------------------- */
+.columna-derecha {
+    flex-grow: 1;
+    height: 70%; /* Usar el espacio restante en móvil */
+    width: 100%; /* CLAVE: Ocupar todo el ancho en móvil */
+    display: flex;
+    align-items: center;
+}
+
+/* ---------------------------------- */
+/* CONTENEDOR DE CHAT (VENTANA) */
+/* ---------------------------------- */
+.ventana-chat {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 20px;
+    height: 100%; /* Usar toda la altura disponible */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    overflow: hidden;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    border: 5px solid rgba(40, 54, 24, 0.7);
+}
+
+/* ---------------------------------- */
+/* CONTENEDOR DE MENSAJES */
+/* ---------------------------------- */
+.contenedor-mensajes {
+    flex-grow: 1;
+    padding-bottom: 15px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilo para la barra de desplazamiento */
+.contenedor-mensajes::-webkit-scrollbar {
+    width: 8px;
+}
+
+.contenedor-mensajes::-webkit-scrollbar-thumb {
+    background-color: rgba(188, 108, 37, 0.7);
+    border-radius: 5px;
+}
+
+/* ---------------------------------- */
+/* ESTILO DE LOS MENSAJES */
+/* ---------------------------------- */
+.burbuja-mensaje {
+    padding: 15px 20px;
+    margin-bottom: 15px;
+    border-radius: 25px;
+    color: white;
+    max-width: 85%;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 1.2em;
+    word-wrap: break-word;
+}
+
+/* Mensajes del USUARIO (Marrón anaranjado) */
+.mensaje-usuario {
+    background-color: rgba(221, 161, 94, 0.9);
+    align-self: flex-start;
+}
+
+/* Mensajes del CHATBOT (Verde oscuro) */
+.mensaje-bot {
+    background-color: rgba(96, 108, 56, 0.9);
+    align-self: flex-end;
+}
+
+/* ---------------------------------- */
+/* ESTILO DE LA ENTRADA DE TEXTO */
+/* ---------------------------------- */
+
+/* Estilo para el mensaje de entrada (La burbuja inferior) */
+.mensaje-entrada {
+    background-color: rgba(188, 108, 37, 1);
+    padding: 20px;
+    border-radius: 30px;
+    margin-bottom: 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 70px;
+}
+
+/* Flecha del mensaje de entrada */
+.mensaje-entrada::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: -15px;
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 15px solid rgba(184, 108, 48, 1);
+    transform: rotate(-45deg);
+    right: 15px;
+}
+
+/* Estilo para el campo de texto real */
+.texto-entrada {
+    flex-grow: 1;
+    border: none;
+    background: none;
+    color: white;
+    font-size: 1.2em;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+    outline: none;
+}
+
+/* Estilo para el placeholder */
+.texto-entrada::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+
+/* Estilo del icono de enviar */
+.material-symbols-outlined {
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 48
+}
+
+.boton-enviar {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: white;
+    font-size: 40px;
+    background: none;
+    border: none;
+}
+
+/* ---------------------------------- */
+/* MEDIA QUERY: ESCRITORIO (min-width: 768px) */
+/* ---------------------------------- */
+@media (min-width: 768px) {
+    /* Restaurar el layout de dos columnas */
+    .contenedor-pantalla {
+        flex-direction: row; /* Vuelve a la disposición horizontal */
+        width: 90%;
+        height: 95vh;
+        align-items: flex-end;
+        padding: 0;
+    }
+
+    /* Restaurar las dimensiones del personaje/columna izquierda */
+    .columna-izquierda {
+        width: 20%;
+        height: 80%;
+        justify-content: left;
+    }
+
+    /* Restaurar el tamaño máximo del personaje */
+    .personaje {
+        max-width: 250px;
+    }
+
+    /* Restaurar el layout de la columna derecha */
+    .columna-derecha {
+        height: 100%;
+        width: auto; /* Permite que flex-grow se encargue del ancho */
+    }
+
+    /* Restaurar la ventana de chat a su altura original */
+    .ventana-chat {
+        height: 70%;
+    }
+}
