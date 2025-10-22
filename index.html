@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="./css/bootstrap.min.css">
 </head>
 
-<body class="bg-success">
+<body class="bg-secondary">
     <!-- Navegación -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark bg-opacity-75">
         <div class="container">
@@ -21,7 +21,44 @@
             </div>
         </div>
     </nav>
+    <div class="container team-section " style="padding-top: 50px;">
+        <div class="container-fluid d-flex justify-content-center align-items-center vh-100">
+            <div class="row w-100 gx-5" style="max-width: 1000px; height: 90vh;">
 
+                <div class="col-12 col-md-5 p-0 d-none d-md-block">
+                    <img src="samantha.png" alt="Samantha" class="img-fluid h-100 object-fit-cover"
+                        id="samantha-image">
+                </div>
+
+                <div class="col-12 col-md-7 p-0 d-flex flex-column">
+                    <div class="card h-100">
+
+                        <div class="card-header bg-danger text-white">
+                            <h5 class="mb-0">Samantha</h5>
+                        </div>
+
+                        <div class="card-body flex-grow-1" id="contenedor-mensajes">
+                        </div>
+
+                        <div class="card-footer p-3">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Escribe un mensaje..."
+                                    aria-label="Escribe un mensaje" id="campo-entrada">
+                                <button class="btn btn-danger" type="button" id="boton-enviar">
+                                    Enviar
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>

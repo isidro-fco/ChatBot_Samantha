@@ -2,8 +2,8 @@
 
 /* Estilos globales para el body */
 body {
-    background-color: #05f034; /* Fondo muy oscuro para un look moderno */
-    color: #04a92d; /* Color de texto general claro */
+    background-color: #5A5B4B; /* Fondo muy oscuro para un look moderno */
+    color: #5A5B4B; /* Color de texto general claro */
     font-family: Arial, sans-serif; /* Fuente simple y legible */
     line-height: 1.6;
 }
@@ -85,6 +85,42 @@ h1, h5 {
     letter-spacing: 2px;
 }
 
+
+/* Altura y apariencia del área de mensajes */
+#contenedor-mensajes {
+    height: 400px; /* Altura fija para el área de chat */
+    overflow-y: scroll; /* Permite el desplazamiento */
+    padding: 15px;
+    background-color: #f8f9fa; /* Color de fondo claro */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilo base para todas las burbujas de mensaje */
+.burbuja-mensaje {
+    max-width: 80%; /* Máximo ancho de la burbuja */
+    padding: 8px 12px;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    line-height: 1.4;
+    word-wrap: break-word; /* Romper palabras largas */
+}
+
+/* Mensajes del usuario (alineados a la derecha) */
+.mensaje-usuario {
+    background-color: #DC3545; /* Color primario de Bootstrap (Azul) */
+    color: white;
+    align-self: flex-end; /* Alineación a la derecha */
+    border-bottom-right-radius: 3px; /* Esquina derecha inferior más aguda */
+}
+
+/* Mensajes del bot (alineados a la izquierda) */
+.mensaje-bot {
+    background-color: #e9ecef; /* Color gris claro */
+    color: #212529; /* Texto oscuro */
+    align-self: flex-start; /* Alineación a la izquierda */
+    border-bottom-left-radius: 3px; /* Esquina izquierda inferior más aguda */
+}
 
 /* ---------------------------------- */
 /* MEDIA QUERY: ESCRITORIO (min-width: 768px) */
