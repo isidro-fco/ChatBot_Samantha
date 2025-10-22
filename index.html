@@ -5,38 +5,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Samantha Chatbot</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <link rel="stylesheet" href="styles.css">
-    
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
 </head>
 
-<body>
-    <div class="barra-superior">
-        <a href="index.html" class="opcion">SAMANTHA</a>
-        <a href="quienes_somos.html" class="opcion">QUIENES SOMOS</a>
-    </div>
-    <div class="contenedor-pantalla">
-        <div class="columna-izquierda">
-            <div class="personaje"></div>
-        </div>
-
-        <div class="columna-derecha">
-            <div class="ventana-chat">
-                <div class="contenedor-mensajes" id="contenedor-mensajes">
-                    <div class="burbuja-mensaje mensaje-bot" style="width: 75%;">¡Hola! Soy Samantha, tu asistente virtual. ¿En qué puedo ayudarte?</div>
-                </div>
-
-                <div class="burbuja-mensaje mensaje-entrada">
-                    <input type="text" id="campo-entrada" placeholder="Escribe tu mensaje aquí..." class="texto-entrada" autocomplete="off">
-
-                    <span class="material-symbols-outlined boton-enviar" id="boton-enviar">
-                        send
-                    </span>
-                </div>
+<body class="bg-success">
+    <!-- Navegación -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark bg-opacity-75">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">SAMANTHA</a>
+            <div class="navbar-nav">
+                <a class="nav-link text-white" href="quienes-somos.html">QUIÉNES SOMOS</a>
             </div>
         </div>
-    </div>
-    <script src="script.js"></script>
+    </nav>
+
 </body>
 
 </html>

@@ -1,0 +1,127 @@
+/* styles.css */
+
+/* Estilos globales para el body */
+body {
+    background-color: #05f034; /* Fondo muy oscuro para un look moderno */
+    color: #04a92d; /* Color de texto general claro */
+    font-family: Arial, sans-serif; /* Fuente simple y legible */
+    line-height: 1.6;
+}
+
+/* Estilo para la sección del equipo */
+.team-section {
+    min-height: 100vh; /* Asegura que la sección cubra toda la altura */
+    padding-bottom: 50px; /* Espacio extra en la parte inferior */
+}
+
+/* Encabezados */
+h1, h5 {
+    color: #ffffff; /* Títulos en blanco para que destaquen */
+    font-weight: 700;
+}
+
+/* Clases de texto de Bootstrap modificadas para el tema oscuro */
+.text-warning {
+    color: #ffc107 !important; /* Mantiene el amarillo de Bootstrap para advertencias/énfasis */
+}
+
+.text-light {
+    color: #f8f9fa !important; /* Texto claro para contraste */
+}
+
+/* Estilos para las tarjetas del equipo */
+.card {
+    background-color: #1e1e1e; /* Fondo de tarjeta un poco más claro que el body */
+    border: 1px solid #333; /* Borde sutil */
+    color: #e0e0e0;
+    margin-bottom: 20px; /* Espacio entre tarjetas */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición para el hover */
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Pequeño levantamiento en hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* Sombra para profundidad */
+}
+
+.card-img-top {
+    height: 250px; /* Altura fija para las imágenes de perfil */
+    object-fit: cover; /* Asegura que la imagen cubra el espacio sin distorsión */
+    border-bottom: 1px solid #333;
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+.card-title {
+    margin-bottom: 0.5rem;
+    font-size: 1.25rem;
+}
+
+.card-text {
+    font-size: 0.95rem;
+    color: #a0a0a0; /* Descripción en color gris claro */
+}
+
+/* Estilo para el botón de INSTAGRAM */
+.btn-primary {
+    background-color: #ff69b4; /* Rosa vibrante o un color que destaque, diferente al azul por defecto */
+    border-color: #ff69b4;
+    font-weight: bold;
+}
+
+.btn-primary:hover {
+    background-color: #e65a9a; /* Un poco más oscuro en hover */
+    border-color: #e65a9a;
+}
+
+/* Navegación */
+.navbar {
+    border-bottom: 1px solid #333; /* Borde inferior para separar de la sección principal */
+    backdrop-filter: blur(5px); /* Efecto de desenfoque para la transparencia */
+}
+
+.navbar-brand {
+    letter-spacing: 2px;
+}
+
+
+/* ---------------------------------- */
+/* MEDIA QUERY: ESCRITORIO (min-width: 768px) */
+/* ---------------------------------- */
+@media (min-width: 768px) {
+
+    /* Restaurar el layout de dos columnas */
+    .contenedor-pantalla {
+        flex-direction: row;
+        /* Vuelve a la disposición horizontal */
+        width: 90%;
+        height: 95vh;
+        align-items: flex-end;
+        padding: 0;
+    }
+
+    /* Restaurar las dimensiones del personaje/columna izquierda */
+    .columna-izquierda {
+        width: 20%;
+        height: 80%;
+        justify-content: left;
+    }
+
+    /* Restaurar el tamaño máximo del personaje */
+    .personaje {
+        max-width: 250px;
+    }
+
+    /* Restaurar el layout de la columna derecha */
+    .columna-derecha {
+        height: 100%;
+        width: auto;
+        /* Permite que flex-grow se encargue del ancho */
+    }
+
+    /* Restaurar la ventana de chat a su altura original */
+    .ventana-chat {
+        height: 70%;
+    }
+}
