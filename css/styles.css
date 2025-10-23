@@ -1,3 +1,27 @@
+/* Aplica a todo el documento */
+::-webkit-scrollbar {
+  width: 12px;               /* Ancho del scrollbar vertical */
+  height: 12px;              /* Alto del scrollbar horizontal */
+}
+
+/* Fondo del scrollbar */
+::-webkit-scrollbar-track {
+  background: #f0f0f0;       /* Color de fondo del track */
+  border-radius: 10px;       /* Bordes redondeados */
+}
+
+/* La parte que se mueve (thumb) */
+::-webkit-scrollbar-thumb {
+  background: #DC3545;          /* Color del thumb */
+  border-radius: 10px;       /* Bordes redondeados */
+}
+
+/* Cuando el usuario pasa el mouse sobre el thumb */
+::-webkit-scrollbar-thumb:hover {
+  background: #d71327;          /* Color más oscuro */
+}
+
+
 /* styles.css */
 
 /* Estilos globales para el body */
@@ -20,14 +44,6 @@ h1, h5 {
     font-weight: 700;
 }
 
-/* Clases de texto de Bootstrap modificadas para el tema oscuro */
-.text-warning {
-    color: #ffc107 !important; /* Mantiene el amarillo de Bootstrap para advertencias/énfasis */
-}
-
-.text-light {
-    color: #f8f9fa !important; /* Texto claro para contraste */
-}
 
 /* Estilos para las tarjetas del equipo */
 .card {
@@ -63,18 +79,6 @@ h1, h5 {
     color: #a0a0a0; /* Descripción en color gris claro */
 }
 
-/* Estilo para el botón de INSTAGRAM */
-.btn-primary {
-    background-color: #ff69b4; /* Rosa vibrante o un color que destaque, diferente al azul por defecto */
-    border-color: #ff69b4;
-    font-weight: bold;
-}
-
-.btn-primary:hover {
-    background-color: #e65a9a; /* Un poco más oscuro en hover */
-    border-color: #e65a9a;
-}
-
 /* Navegación */
 .navbar {
     border-bottom: 1px solid #333; /* Borde inferior para separar de la sección principal */
@@ -85,13 +89,34 @@ h1, h5 {
     letter-spacing: 2px;
 }
 
+/* ---------------------------------- */
+/* ESTILOS ESPECÍFICOS PARA EL CHATBOT */
+/* ---------------------------------- */
+
+/* Hace que la burbuja del bot sea un contenedor flex para alinear el icono y el texto */
+.mensaje-bot {
+    display: flex; /* Habilita el layout flexible */
+    align-items: center; /* Alinea los ítems verticalmente al centro */
+}
+
+/* Estilo para el icono dentro del mensaje del bot */
+.icono-bot {
+    width: 24px;      /* Tamaño fijo para el icono */
+    height: 24px;
+    margin-right: 8px; /* Espacio a la derecha del icono para separarlo del texto */
+    border-radius: 50%; /* Opcional: para hacerlo circular */
+    object-fit: cover; /* Asegura que la imagen se ajuste */
+    background-color: white; /* Opcional: Si el icono tiene fondo transparente */
+    padding: 2px;
+}
 
 /* Altura y apariencia del área de mensajes */
 #contenedor-mensajes {
     height: 400px; /* Altura fija para el área de chat */
     overflow-y: scroll; /* Permite el desplazamiento */
     padding: 15px;
-    background-color: #f8f9fa; /* Color de fondo claro */
+    border-radius: 8px;
+    background-color: #f8f9fa; /*Color de fondo claro */
     display: flex;
     flex-direction: column;
 }
@@ -116,8 +141,8 @@ h1, h5 {
 
 /* Mensajes del bot (alineados a la izquierda) */
 .mensaje-bot {
-    background-color: #e9ecef; /* Color gris claro */
-    color: #212529; /* Texto oscuro */
+    background-color: #645E54; /* Color gris claro */
+    color: white; /* Texto oscuro */
     align-self: flex-start; /* Alineación a la izquierda */
     border-bottom-left-radius: 3px; /* Esquina izquierda inferior más aguda */
 }

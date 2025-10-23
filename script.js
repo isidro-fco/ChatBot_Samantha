@@ -21,13 +21,15 @@ document.addEventListener('DOMContentLoaded', () => {
         // Determinar la clase de estilo (usuario o bot)
         if (remitente === 'usuario') {
             burbujaMensaje.classList.add('mensaje-usuario');
+            burbujaMensaje.textContent = textoMensaje;
         } else {
             burbujaMensaje.classList.add('mensaje-bot');
+            burbujaMensaje.innerHTML = `
+                <img src="sama_icon.png" alt="Icono de SAMANTHA" class="icono-bot">
+                <span class="texto-bot">${textoMensaje}</span>
+            `;
         }
-
-        // Asignar el contenido de texto
-        burbujaMensaje.textContent = textoMensaje;
-
+        
         // Agregar el mensaje al contenedor
         contenedorMensajes.appendChild(burbujaMensaje);
 

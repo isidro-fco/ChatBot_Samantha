@@ -4,9 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Samantha Chatbot</title>
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>SAMANTHA</title>
+    <link rel="icon" type="image/png" href="sama_icon.png">
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="./css/bootstrap.min.css">
 </head>
@@ -15,50 +14,89 @@
     <!-- Navegación -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark bg-opacity-75">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="index.html">SAMANTHA</a>
+            <a class="navbar-brand fw-bold" href="index.html">
+                <img src="sama_icon.png" alt="Icono de SAMANTHA" width="24" height="24" class="me-2">
+                SAMANTHA
+            </a>
             <div class="navbar-nav">
                 <a class="nav-link text-white" href="quienes-somos.html">QUIÉNES SOMOS</a>
             </div>
         </div>
     </nav>
     <div class="container team-section " style="padding-top: 50px;">
-        <div class="container-fluid d-flex justify-content-center align-items-center vh-100">
-            <div class="row w-100 gx-5" style="max-width: 1000px; height: 90vh;">
 
-                <div class="col-12 col-md-5 p-0 d-none d-md-block">
-                    <img src="samantha.png" alt="Samantha" class="img-fluid h-100 object-fit-cover"
-                        id="samantha-image">
-                </div>
-
-                <div class="col-12 col-md-7 p-0 d-flex flex-column">
-                    <div class="card h-100">
-
-                        <div class="card-header bg-danger text-white">
-                            <h5 class="mb-0">Samantha</h5>
-                        </div>
-
-                        <div class="card-body flex-grow-1" id="contenedor-mensajes">
-                        </div>
-
-                        <div class="card-footer p-3">
-                            <div class="input-group">
-                                <input type="text" class="form-control" placeholder="Escribe un mensaje..."
-                                    aria-label="Escribe un mensaje" id="campo-entrada">
-                                <button class="btn btn-danger" type="button" id="boton-enviar">
-                                    Enviar
-                                </button>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
+        <!-- Información adicional para hacer scroll -->
+        <div class="container mt-4 mb-4">
+            <div class="text-center text-danger">
+                <h1><strong>SAMANTHA</strong></h1>
+                <p class="lead text-white mb-4">
+                    Samantha es un <strong>Chatbot</strong> especializado de alto rendimiento. Su misión principal es
+                    actuar como un
+                    <strong>experto interactivo</strong> dedicado exclusivamente al vasto y complejo universo de
+                    <strong>Call of Duty Zombies</strong>.
+                    Está diseñada para proporcionar información instantánea y precisa sobre historias, mapas, Easter
+                    Eggs (secretos), personajes, armas, GobbleGums, elixires y estrategias de todas las entregas
+                    principales de la saga, desde <strong>World at War</strong> hasta <strong>Black Ops 3</strong>. Su
+                    objetivo es ayudar a la
+                    comunidad de jugadores a desentrañar los misterios y dominar los desafíos de cada ronda.
+                </p>
             </div>
         </div>
+
+        <div class="card h-75">
+            <div class="card-body flex-grow-1" id="contenedor-mensajes">
+            </div>
+            <div class="card-footer p-3">
+                <div class="input-group">
+                    <span class="input-group-text bg-white" style="padding: 0.375rem 0.75rem;">
+                        <img src="sama_icon.png" alt="Icono de SAMANTHA" width="24" height="24">
+                    </span>
+                    <input type="text" class="form-control" placeholder="Escribe un mensaje..."
+                        aria-label="Escribe un mensaje" id="campo-entrada">
+                    <button class="btn btn-danger" type="button" id="boton-enviar">
+                        Enviar
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="script.js"></script>
+
+        <figure class="text-center">
+            <blockquote class="blockquote text-white">
+                <p>
+                    <strong>"Sin las herramientas de IA adecuadas, un chatbot es solo una pregunta frecuente con
+                        pretensiones."
+                    </strong>
+                </p>
+            </blockquote>
+            <figcaption class="blockquote-footer text-danger">
+                Reflexión empresarial de <cite title="Source Title">IBM</cite>
+            </figcaption>
+        </figure>
     </div>
+
+    <footer class="text-center py-3 mt-5 bg-dark text-white-50">
+        <div class="container">
+            <p class="mb-0">
+                &copy; <span id="current-year"></span> SAMANTHA Chatbot. Todos los derechos reservados.
+            </p>
+            <p class="mb-0">
+                Desarrollado para la comunidad de Call of Duty Zombies.
+            </p>
+            <p class="small mb-0 mt-1">
+                Este sitio es un proyecto de demostración no oficial y no está afiliado con Activision ni Call of Duty.
+            </p>
+        </div>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
+
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
 </body>
 
 </html>
